@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet } from 'react-native'
+import {Text, View, StyleSheet, TextInput } from 'react-native'
 import { useState } from 'react'
 
 export default function Index() {
@@ -6,6 +6,22 @@ export default function Index() {
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [idade, setIdade] = useState('') 
+
+    return(
+        
+        <View style={estilos.container}>
+
+        <TextInput
+        placeholder='Nós diga seu nome'
+        placeholderTextColor={'white'}
+        value={nome}
+        onChangeText={setNome}
+        style={estilos.input}
+        />
+
+        </View>
+    )
+
 }
 
 const estilos = StyleSheet.create({
