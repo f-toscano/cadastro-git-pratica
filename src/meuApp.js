@@ -19,6 +19,14 @@ export default function Index() {
         style={estilos.input}
         />
 
+        <TextInput
+        placeholder='Nós diga seu email'
+        placeholderTextColor={'white'}
+        value={email}
+        onChangeText={setEmail}
+        style={estilos.input}
+        />
+
         </View>
     )
 
