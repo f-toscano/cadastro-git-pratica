@@ -27,6 +27,15 @@ export default function Index() {
         style={estilos.input}
         />
 
+        <TextInput
+        placeholder='Nós diga sua idade'
+        placeholderTextColor={'white'}
+        keyboardType='numeric'
+        value={idade}
+        onChangeText={setIdade}
+        style={estilos.input}
+        />
+
         </View>
     )
 
