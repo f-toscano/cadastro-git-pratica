@@ -6,6 +6,7 @@ export default function Index() {
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [idade, setIdade] = useState('') 
+    const [senha, setSenha] = useState('')
 
     return(
         
@@ -33,6 +34,16 @@ export default function Index() {
         keyboardType='numeric'
         value={idade}
         onChangeText={setIdade}
+        style={estilos.input}
+        />
+
+        <TextInput
+        placeholder='Nós diga sua idade'
+        placeholderTextColor={'white'}
+        keyboardType='numeric'
+        secureTextEntry={true}
+        value={senha}
+        onChangeText={setSenha}
         style={estilos.input}
         />
 
