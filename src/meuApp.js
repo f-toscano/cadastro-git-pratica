@@ -38,7 +38,7 @@ export default function Index() {
         />
 
         <TextInput
-        placeholder='Nós diga sua idade'
+        placeholder='Nós diga sua senha'
         placeholderTextColor={'white'}
         keyboardType='numeric'
         secureTextEntry={true}
