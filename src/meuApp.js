@@ -21,19 +21,19 @@ export default function Index() {
         />
 
         <TextInput
-        placeholder='Nós diga seu email'
-        placeholderTextColor={'white'}
-        value={email}
-        onChangeText={setEmail}
-        style={estilos.input}
-        />
-
-        <TextInput
         placeholder='Nós diga sua idade'
         placeholderTextColor={'white'}
         keyboardType='numeric'
         value={idade}
         onChangeText={setIdade}
+        style={estilos.input}
+        />
+
+        <TextInput
+        placeholder='Nós diga seu email'
+        placeholderTextColor={'white'}
+        value={email}
+        onChangeText={setEmail}
         style={estilos.input}
         />
 
