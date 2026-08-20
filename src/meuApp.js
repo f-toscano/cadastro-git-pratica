@@ -9,44 +9,59 @@ export default function Index() {
     const [senha, setSenha] = useState('')
 
     return(
-        
-        <View style={estilos.container}>
 
-        <TextInput
-        placeholder='Nós diga seu nome'
-        placeholderTextColor={'white'}
-        value={nome}
-        onChangeText={setNome}
-        style={estilos.input}
-        />
+        <View>
+            <View style={estilos.titleLayout}>
+                <Text style={estilos.titulo}>
+                    CADASTRO
+                </Text>
 
-        <TextInput
-        placeholder='Nós diga sua idade'
-        placeholderTextColor={'white'}
-        keyboardType='numeric'
-        value={idade}
-        onChangeText={setIdade}
-        style={estilos.input}
-        />
+              <View style={estilos.layout}>
+                    <Text>
+                      siga as informações abaixo
+                    </Text>
+                </View>
+            </View>
 
-        <TextInput
-        placeholder='Nós diga seu email'
-        placeholderTextColor={'white'}
-        value={email}
-        onChangeText={setEmail}
-        style={estilos.input}
-        />
+            <View style={estilos.container}>
 
-        <TextInput
-        placeholder='Nós diga sua senha'
-        placeholderTextColor={'white'}
-        keyboardType='numeric'
-        secureTextEntry={true}
-        value={senha}
-        onChangeText={setSenha}
-        style={estilos.input}
-        />
+            <TextInput
+            placeholder='Nós diga seu nome'
+            placeholderTextColor={'white'}
+            value={nome}
+            onChangeText={setNome}
+            style={estilos.input}
+            />
 
+            <TextInput
+            placeholder='Nós diga sua idade'
+            placeholderTextColor={'white'}
+            keyboardType='numeric'
+            value={idade}
+            onChangeText={setIdade}
+            style={estilos.input}
+            />
+
+            <TextInput
+            placeholder='Nós diga seu email'
+            placeholderTextColor={'white'}
+            value={email}
+            onChangeText={setEmail}
+            style={estilos.input}
+            />
+
+            <TextInput
+            placeholder='Nós diga sua senha'
+            placeholderTextColor={'white'}
+            keyboardType='numeric'
+            secureTextEntry={true}
+            value={senha}
+            onChangeText={setSenha}
+            style={estilos.input}
+            />
+
+            </View>
+    
         </View>
     )
 
@@ -55,6 +70,19 @@ export default function Index() {
 const estilos = StyleSheet.create({
 
     container: {
+        flex: 1
+    },
+
+    titleLayout: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20,
+        flex: 1
+    },
+
+    layout: {
+        alignItems: 'center',
+        justifyContent: 'center',
         flex: 1
     },
 
