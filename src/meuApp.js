@@ -7,6 +7,7 @@ export default function Index() {
     const [email, setEmail] = useState('')
     const [idade, setIdade] = useState('') 
     const [senha, setSenha] = useState('')
+    const [telefone, setTelefone] = useState('')
 
     return(
         
@@ -44,6 +45,15 @@ export default function Index() {
         secureTextEntry={true}
         value={senha}
         onChangeText={setSenha}
+        style={estilos.input}
+        />
+
+        <TextInput
+        placeholder='Nós diga seu número de telefone'
+        placeholderTextColor={'white'}
+        keyboardType='numeric'
+        value={telefone}
+        onChangeText={setTelefone}
         style={estilos.input}
         />
 
