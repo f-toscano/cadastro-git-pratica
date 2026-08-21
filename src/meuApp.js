@@ -34,7 +34,6 @@ export default function Index() {
             style={estilos.input}
             />
 
-<<<<<<< HEAD
             <TextInput
             placeholder='Nós diga sua idade'
             placeholderTextColor={'white'}
@@ -62,19 +61,17 @@ export default function Index() {
             style={estilos.input}
             />
 
-            </View>
-    
-=======
-        <TextInput
-        placeholder='Nós diga seu número de telefone'
-        placeholderTextColor={'white'}
-        keyboardType='numeric'
-        value={telefone}
-        onChangeText={setTelefone}
-        style={estilos.input}
-        />
+            <TextInput
+            placeholder='Nós diga seu número de telefone'
+            placeholderTextColor={'white'}
+            keyboardType='numeric'
+            value={telefone}
+            onChangeText={setTelefone}
+            style={estilos.input}
+            />
 
->>>>>>> feature/campo-telefone
+            </View>
+
         </View>
     )
 
