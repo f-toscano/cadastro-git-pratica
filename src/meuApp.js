@@ -17,58 +17,62 @@ export default function Index() {
                     CADASTRO
                 </Text>
 
-              <View style={estilos.layout}>
+              <View>
                     <Text>
-                      siga as informações abaixo
+                      Informe seus dados abaixo
                     </Text>
                 </View>
             </View>
 
             <View style={estilos.container}>
 
-            <TextInput
-            placeholder='Nós diga seu nome'
-            placeholderTextColor={'white'}
-            value={nome}
-            onChangeText={setNome}
-            style={estilos.input}
-            />
+                    <Text style={estilos.label}>
+                        1. Nome Completo
+                    </Text>
+                <TextInput
+                value={nome}
+                onChangeText={setNome}
+                style={estilos.input}
+                />
 
-            <TextInput
-            placeholder='Nós diga sua idade'
-            placeholderTextColor={'white'}
-            keyboardType='numeric'
-            value={idade}
-            onChangeText={setIdade}
-            style={estilos.input}
-            />
+                    <Text style={estilos.label}>
+                        2. Idade
+                    </Text>
+                <TextInput
+                keyboardType='numeric'
+                value={idade}
+                onChangeText={setIdade}
+                style={estilos.input}
+                />
 
-            <TextInput
-            placeholder='Nós diga seu email'
-            placeholderTextColor={'white'}
-            value={email}
-            onChangeText={setEmail}
-            style={estilos.input}
-            />
+                    <Text style={estilos.label}>
+                        3. Email
+                    </Text>
+                <TextInput
+                value={email}
+                onChangeText={setEmail}
+                style={estilos.input}
+                />
 
-            <TextInput
-            placeholder='Nós diga sua senha'
-            placeholderTextColor={'white'}
-            keyboardType='numeric'
-            secureTextEntry={true}
-            value={senha}
-            onChangeText={setSenha}
-            style={estilos.input}
-            />
-
-            <TextInput
-            placeholder='Nós diga seu número de telefone'
-            placeholderTextColor={'white'}
-            keyboardType='numeric'
-            value={telefone}
-            onChangeText={setTelefone}
-            style={estilos.input}
-            />
+                    <Text style={estilos.label}>
+                        4. Senha 
+                    </Text>
+                <TextInput
+                secureTextEntry={true}
+                value={senha}
+                onChangeText={setSenha}
+                style={estilos.input}
+                />
+                
+                    <Text style={estilos.label}>
+                        5. Telefone
+                    </Text>
+                <TextInput
+                keyboardType='numeric'
+                value={telefone}
+                onChangeText={setTelefone}
+                style={estilos.input}
+                />
 
             </View>
 
@@ -80,7 +84,8 @@ export default function Index() {
 const estilos = StyleSheet.create({
 
     container: {
-        flex: 1
+        flex: 7,
+        padding: 10
     },
 
     titleLayout: {
@@ -101,11 +106,19 @@ const estilos = StyleSheet.create({
         fontSize: 20
     },
 
-    input: {
+    label: {
+        fontSize: 14,
+        margin: 7,
+        fontWeight: '600',
+        color: '#222'
+    },
 
-        borderWidth: 1,
-        padding: 10,
-        margin: 10,
-        backgroundColor: 'gray'
+    input: {
+       borderWidth: 1,
+       borderColor: '#ccc',
+       borderRadius: 8,
+       padding: 12,
+       fontSize: 14,
+       backgroundColor: '#fff'
     },
 })
