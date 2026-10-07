@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet, TextInput } from 'react-native'
+import {Text, View, StyleSheet, TextInput,  Button} from 'react-native'
 import { useState } from 'react'
 
 export default function Index() {
@@ -8,6 +8,11 @@ export default function Index() {
     const [idade, setIdade] = useState('') 
     const [senha, setSenha] = useState('')
     const [telefone, setTelefone] = useState('')
+    const [titulo, setTitulo] = useState('CADASTRAR-SE')
+
+    function Alterar() {
+      setTitulo("cadastro feito!")
+    }
 
     return(
 
@@ -26,54 +31,64 @@ export default function Index() {
 
             <View style={estilos.container}>
 
-                    <Text style={estilos.label}>
-                        1. Nome Completo
-                    </Text>
-                <TextInput
-                value={nome}
-                onChangeText={setNome}
-                style={estilos.input}
-                />
+            <Text style={estilos.label}>
+            1. Nome Completo
+              </Text>
+            <TextInput
+            value={nome}
+            onChangeText={setNome}
+            style={estilos.input}
+            />
 
-                    <Text style={estilos.label}>
-                        2. Idade
-                    </Text>
-                <TextInput
-                keyboardType='numeric'
-                value={idade}
-                onChangeText={setIdade}
-                style={estilos.input}
-                />
+            <Text style={estilos.label}>
+            2. Idade
+              </Text>
+            <TextInput
+            keyboardType='numeric'
+            value={idade}
+            onChangeText={setIdade}
+            style={estilos.input}
+            />
 
-                    <Text style={estilos.label}>
-                        3. Email
-                    </Text>
-                <TextInput
-                value={email}
-                onChangeText={setEmail}
-                style={estilos.input}
-                />
+             <Text style={estilos.label}>
+            3. Email
+              </Text>
+            <TextInput
+            value={email}
+            onChangeText={setEmail}
+            style={estilos.input}
+            />
 
-                    <Text style={estilos.label}>
-                        4. Senha 
-                    </Text>
-                <TextInput
-                secureTextEntry={true}
-                value={senha}
-                onChangeText={setSenha}
-                style={estilos.input}
-                />
-                
-                    <Text style={estilos.label}>
-                        5. Telefone
-                    </Text>
-                <TextInput
-                keyboardType='numeric'
-                value={telefone}
-                onChangeText={setTelefone}
-                style={estilos.input}
-                />
+             <Text style={estilos.label}>
+            4. Senha 
+              </Text>
+            <TextInput
+            secureTextEntry={true}
+            value={senha}
+            onChangeText={setSenha}
+            style={estilos.input}
+            />
+            
+              <Text style={estilos.label}>
+            5. Telefone
+                </Text>
+            <TextInput
+            keyboardType='numeric'
+            value={telefone}
+            onChangeText={setTelefone}
+            style={estilos.input}
+            />
 
+            </View>
+
+            <View style={[estilos.container, estilos.cntBotao]}>
+
+            <Button
+              title={titulo}
+              onPress={Alterar}
+              disabled={nome === '' || idade === '' || email === '' || senha === '' || telefone === ''}
+              />
+        
             </View>
 
         </View>
@@ -84,8 +99,15 @@ export default function Index() {
 const estilos = StyleSheet.create({
 
     container: {
-        flex: 7,
-        padding: 10
+        flex: 5,
+        padding: 10,
+    
+    },
+
+    cntBotao: {
+                padding: 30,
+                marginTop: 10
+  
     },
 
     titleLayout: {
@@ -110,15 +132,18 @@ const estilos = StyleSheet.create({
         fontSize: 14,
         margin: 7,
         fontWeight: '600',
-        color: '#222'
+        color: '#222',
+
     },
 
     input: {
-       borderWidth: 1,
-       borderColor: '#ccc',
-       borderRadius: 8,
-       padding: 12,
-       fontSize: 14,
-       backgroundColor: '#fff'
+        borderWidth: 1,
+        borderColor: "#ccc",
+        borderRadius: 8,
+        padding: 12,
+        fontSize: 14,
+        backgroundColor: "#fff"
+
     },
+
 })
